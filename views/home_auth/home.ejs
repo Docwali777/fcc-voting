@@ -1,0 +1,18 @@
+<% include ../partials/header %>
+
+  <div class="container">
+    <div class="row">
+      <div class="jumbotron">
+        <h1>Full Stack Javascript Voting Application</h1>
+      </div>
+    </div>
+    <div class="well"><a href="/votes">All Votes Created</a></div>
+  <%  if(user){   %>
+        <div class="well"><a href="/user">Votes by: <%-user.username[0].toUpperCase() + user.username.slice(1)  %>  </a></div>
+  <%  } else{ %>
+      <div></div>
+<%    } %>
+  </div>
+
+
+  <% include ../partials/footer %>

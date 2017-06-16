@@ -1,0 +1,26 @@
+
+<% include ../partials/header %>
+
+<div class="container">
+  <div class="row">
+
+    <a href="/votes"><button class="btn btn-default"><span>All Votes </span></button></a>
+  <%  if(user){     %>
+      <a href="/user"> <button class="btn btn-default"><span>Votes by: <%- user.username[0].toUpperCase() + user.username.slice(1) %> </span></button></a>
+  <%  } else {  %>
+      <span></span>
+<%    }  %>
+<hr>
+    <a href="/votes/new"><button class="btn btn-success form-control">Create New Poll</button></a>
+    <hr>
+<div class="panel-group">
+<% options.map(vote=>{ %>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      Title: <%= vote.options.title %>  - <em>created by <strong><%= vote.user[0].toUpperCase() + vote.user.slice(1)  %></strong></em>
+            <a href="/votes/<%= vote._id %>"><button class='btn btn-primary pull-right'>Show</button></a>
+    </div>
+  </div>
+<% }) %>
+
+</div>
