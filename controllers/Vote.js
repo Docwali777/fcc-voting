@@ -51,7 +51,7 @@ vote.deleteById = (req, res) => {
       console.log('error deleting ITEM');
     } else {
       // console.log('item deleteById')
-      res.redirect('/votes')
+      res.redirect('/user')
     }
   })
 }
