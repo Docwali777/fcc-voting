@@ -5,7 +5,7 @@
     <a href="/votes"><button class='btn btn-default'><span> All Votes </span></button></a>
     <a href="/user"> <button class='btn btn-default'><span>Votes by: <%- user.username[0].toUpperCase() + user.username.slice(1) %> </span></button></a>
     <div class="header">
-      <h1>Votes create by: <%= user.username[0].toUpperCase() + user.username.slice(1) %></h1>
+      <h1>Votes created by: <%= user.username[0].toUpperCase() + user.username.slice(1) %></h1>
       <a href="/votes/new"><button class="btn btn-success form-control">Create New Poll</button></a>
       <hr>
     </div>
